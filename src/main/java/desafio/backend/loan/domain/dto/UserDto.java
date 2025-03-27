@@ -9,6 +9,6 @@ import jakarta.validation.constraints.Pattern;
 public record UserDto(@NotBlank String name,
                       @NotNull @Min(1) int age,
                       @NotBlank @Pattern(regexp = "\\d{3}.\\d{3}.\\d{3}-\\d{2}") String cpf,
-                      @NotNull @Min(0) Long income,
-                      States location) {
+                      @NotNull @Min(1) Long income,
+                      @NotNull States location) {
 }
